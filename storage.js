@@ -1,11 +1,7 @@
-
- 
- returnStoreData();
-
+returnStoreData();
 
  function returnStoreData(){
     let array = JSON.parse(localStorage.getItem("table"));
-
 
     if (array != null){
       for (let i = 0; i < array.length; i++){
@@ -21,14 +17,7 @@
         due.appendChild(document.createTextNode(array[i].dueDate));
       }
     }
-      
-
  }
- 
-
-
-
- 
  
  function storeData(){
     let taskName=document.getElementById("taskName").value;
@@ -58,6 +47,3 @@ function clearData(){
   localStorage.clear()
   document.getElementById('saveTable').getElementsByTagName('tbody')[0].innerHTML = "";
 }
-
-
-

@@ -12,9 +12,6 @@ function addAssignment() {
 }
 
 // when "add assignment" is clicked, the assignment gets added to the "To Do" list
-
-
-
 function getPriority(grade, points, dueDate) {
   var pointUrgency = 0;
 

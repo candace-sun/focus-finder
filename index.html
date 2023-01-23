@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  Open web view in new tab for full screen<br><br>
-
+  <div class="header">FocusFinder</div>
+  <p style="text-align:center">Need a hand with your workload? Input your classes and assignments, and we'll show you the optimal order to tackle your assignments.</p>
   <div class="container">
     <div class="add_box">
       <b>Add a class</b>
@@ -69,10 +69,9 @@
           <th>Due Date</th>
         </tr>
       </table>
+      <button onclick = clearData()> Clear assignments</button>
     </div>
   </div>
-  <p id="testing">(For testing) Clearing schedule </p>
-  <button onclick = clearData()> Clear </button>
   <script src="script.js"></script>
   <script src="storage.js"></script>
 
