@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Career Launch Project</title>
+  <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
+  <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+</head>
+
+<body>
+  Open web view in new tab for full screen<br><br>
+
+  <div class="container">
+    <div class="add_box">
+      <b>Add a class</b>
+      <form>
+        <label for="textbox">Class name:</label>
+        <input type="text" id="classToAdd" name="textbox" placeholder="ex. CMSC132" required>
+        <label for="textbox">Number of credits:</label>
+        <input type="text" id="credits" name="textbox" placeholder="ex. 3" required>
+      </form>
+      <button onclick="addClass()">Add class</button>
+    </div>
+
+    <div class="add_box">
+      <b>Add an assignment</b>
+      <div>
+        <label for="textbox">Assignment name:</label>
+        <input type="text" id="taskName" name="name" placeholder="ex. Speech Outline" required>
+
+      <div>Class: <select name="classAdd" id="assignClass">
+          <option disabled selected>Select an option</option>
+          <option value="Extracurricular">Extracurricular</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+        <label for="textbox">Grade in class (%) : </label>
+        <input type="text" id="grade" name="grade" placeholder="Leave blank if extracurricular" required>
+      <div>
+        Due date: <select name="date" id="dueDate">
+          <option disabled selected>Select an option</option>
+          <option value="Today">Today</option>
+          <option value="Tomorrow">Tomorrow</option>
+          <option value="2-3 days">2-3 days</option>
+          <option value="3 days-a week">3 days-a week</option>
+          <option value="1-2 weeks">1-2 weeks</option>
+          <option value="Later than 2 weeks">Later than 2 weeks</option>
+        </select>
+      </div>
+        <label for="textbox">Point value: </label>
+        <input type="text" id="pointValue" name="point" placeholder="Leave blank if extracurricular" required>
+    </div>
+    <button onclick = "storeData()" class = "assignment">Add assignment</button>
+    </div>
+
+    <div class="add_box">
+      <b>To Do: </b>
+      <table id = "saveTable">
+        <tr>
+          <th>Point</th>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Due Date</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <p id="testing">(For testing) Clearing schedule </p>
+  <button onclick = clearData()> Clear </button>
+  <script src="{{url_for('static', filename='script.js')}}"></script>
+  <script src="{{url_for('static', filename='storage.js')}}"></script>
+
+</body>
+
+
+</html>
