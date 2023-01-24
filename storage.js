@@ -49,10 +49,10 @@ function clearData() {
   let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
   tbody.innerHTML = "";
   let newRow = tbody.insertRow(0);
-  let point = newRow.insertCell(0);
-  let task = newRow.insertCell(0);
-  let assign = newRow.insertCell(0);
-  let due = newRow.insertCell(0);
+  let point = newRow.insertCell();
+  let task = newRow.insertCell();
+  let assign = newRow.insertCell();
+  let due = newRow.insertCell();
 
   point.innerHTML = "<b>Point Value</b>";
   task.innerHTML = "<b>Name</b>";
