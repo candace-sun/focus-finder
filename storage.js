@@ -47,7 +47,7 @@ function clearData(){
   localStorage.clear();
   let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
   tbody.innerHTML = "";
-  var header = table.createTHead();
+  var header = tbody.createTHead();
   let newRow = header.insertRow(0);
   let point = newRow.insertCell(0);
   let task = newRow.insertCell(0);
