@@ -44,6 +44,16 @@ returnStoreData();
   }
 
 function clearData(){
-  localStorage.clear()
-  document.getElementById('saveTable').getElementsByTagName('tbody')[0].innerHTML = "";
+  localStorage.clear();
+  let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
+  tbody.innerHTML = "";
+  let newRow = tbody.insertRow();
+  let point = newRow.insertCell();
+  let task = newRow.insertCell();
+  let assign = newRow.insertCell();
+  let due = newRow.insertCell();
+  point.appendChild(document.createTextNode("Point"));
+  task.appendChild(document.createTextNode("Name"));
+  assign.appendChild(document.createTextNode("Class"));
+  due.appendChild(document.createTextNode("Due Date"));
 }
