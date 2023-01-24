@@ -45,9 +45,9 @@ returnStoreData();
 
 function clearData(){
   localStorage.clear();
-  let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
-  tbody.innerHTML = "";
   var table = document.getElementById("saveTable");
+  //let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
+  table.innerHTML = "";
   var header = table.createTHead();
   let newRow = header.insertRow(0);
   let point = newRow.insertCell(0);
@@ -55,8 +55,8 @@ function clearData(){
   let assign = newRow.insertCell(0);
   let due = newRow.insertCell(0);
 
-  point.innerHTML = "<b>Point</b>";
-  task.innerHTML = "<b>Name</b>";
-  assign.innerHTML = "<b>Class</b>";
   due.innerHTML = "<b>Due Date</b>";
+  assign.innerHTML = "<b>Class</b>";
+  task.innerHTML = "<b>Name</b>";
+  point.innerHTML = "<b>Point Value</b>";
 }
