@@ -47,13 +47,15 @@ function clearData(){
   localStorage.clear();
   let tbody = document.getElementById('saveTable').getElementsByTagName('tbody')[0];
   tbody.innerHTML = "";
-  let newRow = tbody.insertRow();
-  let point = newRow.insertCell();
-  let task = newRow.insertCell();
-  let assign = newRow.insertCell();
-  let due = newRow.insertCell();
-  point.appendChild(document.createTextNode("Point"));
-  task.appendChild(document.createTextNode("Name"));
-  assign.appendChild(document.createTextNode("Class"));
-  due.appendChild(document.createTextNode("Due Date"));
+  var header = table.createTHead();
+  let newRow = header.insertRow(0);
+  let point = newRow.insertCell(0);
+  let task = newRow.insertCell(0);
+  let assign = newRow.insertCell(0);
+  let due = newRow.insertCell(0);
+
+  point.innerHTML = "<b>Point</b>";
+  task.innerHTML = "<b>Name</b>";
+  assign.innerHTML = "<b>Class</b>";
+  due.innerHTML = "<b>Due Date</b>";
 }

@@ -20,10 +20,10 @@
     <div class="add_box">
       <b>Add a class</b>
       <form>
-        <div>
         <label for="textbox">Class name:</label>
         <input type="text" id="classToAdd" name="textbox" placeholder="ex. CMSC132" required>
-        </div>
+      </form>
+      <form>
         <label for="textbox">Number of credits:</label>
         <input type="text" id="credits" name="textbox" placeholder="ex. 3" required>
       </form>
@@ -32,18 +32,20 @@
 
     <div class="add_box">
       <b>Add an assignment</b>
-      <div>
+      <form>
         <label for="textbox">Assignment name:</label>
         <input type="text" id="taskName" name="name" placeholder="ex. Speech Outline" required>
-      </div>
+      </form>
       <div>Class: <select name="classAdd" id="assignClass">
           <option disabled selected>Select an option</option>
           <option value="Extracurricular">Extracurricular</option>
           <option value="Other">Other</option>
         </select>
       </div>
-        <label for="textbox">Grade in class (%) : </label>
+      <form>
+        <label for="textbox">Grade in class (%): </label>
         <input type="text" id="grade" name="grade" placeholder="Leave blank if extracurricular" required>
+      </form>
       <div>
         Due date: <select name="date" id="dueDate">
           <option disabled selected>Select an option</option>
@@ -55,10 +57,11 @@
           <option value="Later than 2 weeks">Later than 2 weeks</option>
         </select>
       </div>
+      <form>
         <label for="textbox">Point value: </label>
         <input type="text" id="pointValue" name="point" placeholder="Leave blank if extracurricular" required>
-    </div>
-    <button onclick = "storeData()" class = "assignment">Add assignment</button>
+      </form>
+        <button onclick = "storeData()" class = "assignment">Add assignment</button>
     </div>
 
     <div class="add_box">
